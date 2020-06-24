@@ -1,0 +1,38 @@
+{
+  "name": "gitlab_tailwindcss",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "autoprefixer": "^9.8.1",
+    "postcss-cli": "^7.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "tailwindcss": "^1.4.6"
+  },
+  "scripts": {
+    "watch:tailwind": "postcss src/assets/tailwindcss.css -o src/styles/main.css",
+    "start": "npm run watch:tailwind && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

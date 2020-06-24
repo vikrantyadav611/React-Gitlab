@@ -285,7 +285,7 @@ function App() {
           <span className="hidden items-center relative text-sm md:hidden lg:flex">
             <input
               type="text"
-              className="w-input_width rounded-sm px-1 py-1 outline-none bg-gitlab_pills_bg-less-opaque"
+              className="w-input_width placeholder-gray-500 focus:bg-white rounded-sm px-1 py-1 outline-none bg-gitlab_pills_bg-less-opaque"
               placeholder="Search or jump to..."
               value={value}
               onChange={(e) => input_change(e)}
@@ -295,13 +295,13 @@ function App() {
                 ?
                 <Close fill="#cbd5e0" onClick={() => setValue('') || setState(false)} />
                 :
-                <img src={require('./assets/gitlab_icons/search.svg')} />
+                <img src={require('./assets/search.svg')} />
               }
             </span>
           </span>
           {/* input field for md resolution devices */}
           <span className="hidden hover:bg-gitlab_pills_bg-less-opaque cursor-pointer rounded-sm py-2 px-2 md:block lg:hidden xl:hidden">
-            <img src={require('./assets/gitlab_icons/search.svg')} />
+            <img src={require('./assets/search.svg')} />
           </span>
           {/* Issues, merge requests, ListTask icons, Question & Profile*/}
           {
@@ -716,7 +716,7 @@ function App() {
           </div>
           {/* Table */}
           <div className="flex">
-            <table className="flex-1 table-auto mt-5">
+            <table className="table-auto w-full mt-5">
               <thead className="bg-gitlab_pills_bg-less-opaque">
                 <tr className="h-10">
                   <th className="px-4 border-t border-l text-left text-black font-bold text-sm ">Name</th>
@@ -727,7 +727,7 @@ function App() {
               <tbody className="text-sm">
                 {
                   table_data.map((item, index) => (
-                    <tr className={row_id === index ? 'bg-table_row_bg' : null} onMouseOver={() => setRow_id(index)} onMouseLeave={() => setRow_id(null)}>
+                    <tr key={index} className={row_id === index ? 'bg-table_row_bg' : null} onMouseOver={() => setRow_id(index)} onMouseLeave={() => setRow_id(null)}>
                       <td className="border-t border-l px-4 py-3 text-black border-b ">
                         <div className="flex space-x-1 items-center cursor-pointer hover:underline">
                           {item.icon}

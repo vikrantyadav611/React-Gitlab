@@ -677,7 +677,7 @@ function App() {
             </span>
           </div>
           {/* Last Commit details */}
-          <div className="flex justify-between my-3 bg-gitlab_pills_bg-less-opaque items-center text-sm border border-gray-400 rounded-md p-5">
+          <div className="hidden justify-between my-3 bg-gitlab_pills_bg-less-opaque items-center text-sm border border-gray-400 rounded-md p-5 sm:flex md:flex lg:flex xl:flex">
             <span className="flex flex-row space-x-2">
               <span>
                 <img src={require('./assets/avatar.png')} className="h-10 rounded-full" />
